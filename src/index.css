@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: #faf8ff;
+    --surface-container: #eeedf4;
+    --surface-container-low: #f4f3fa;
+    --surface-container-lowest: #ffffff;
+    --inverse-surface: #2f3036;
+    --background: #faf8ff;
+
+    --primary: #00236f;
+    --on-primary: #ffffff;
+    --primary-fixed: #dce1ff;
+    --on-primary-fixed: #00164e;
+
+    --secondary: #505f76;
+    --on-secondary: #ffffff;
+    --secondary-container: #d0e1fb;
+    --on-secondary-container: #54647a;
+
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --on-error-container: #93000a;
+
+    --on-background: #1a1b21;
+    --on-surface: #1a1b21;
+    --on-surface-variant: #444651;
+
+    --outline: #757682;
+    --outline-variant: #c5c5d3;
+  }
+
+  .dark {
+    --surface: #111318;
+    --surface-container: #1e2025;
+    --surface-container-low: #17191d;
+    --surface-container-lowest: #0c0e11;
+    --inverse-surface: #e3e1e9;
+    --background: #111318;
+
+    --primary: #688dfc;
+    --on-primary: #00236f;
+    --primary-fixed: #dce1ff;
+    --on-primary-fixed: #00164e;
+
+    --secondary: #b7c8e1;
+    --on-secondary: #222a3e;
+    --secondary-container: #38485d;
+    --on-secondary-container: #d0e1fb;
+
+    --error: #ffb4ab;
+    --error-container: #93000a;
+    --on-error-container: #ffdad6;
+
+    --on-background: #e3e1e9;
+    --on-surface: #e3e1e9;
+    --on-surface-variant: #c4c6d0;
+
+    --outline: #8e9099;
+    --outline-variant: #444651;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--surface);
+    color: var(--on-background);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dark .glass-panel {
+    background: rgba(12, 14, 17, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--outline-variant);
+    border-radius: 10px;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .sparkline-container {
+    height: 30px;
+    width: 80px;
+  }
+
+  .ripple-btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s ease;
+  }
+
+  .ripple-btn:active {
+    transform: scale(0.97);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
