@@ -1,5 +1,5 @@
 import { financialOverviewData } from '../data/mockData';
-import { Building2, TrendingUp, TrendingDown, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import { Building2, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 
 const FinancialOverview = () => {
   return (

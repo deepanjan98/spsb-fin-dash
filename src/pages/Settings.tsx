@@ -1,4 +1,4 @@
-import { Settings as SettingsIcon, Shield, Bell, Eye, Palette } from 'lucide-react';
+import { Settings as SettingsIcon, Shield, Bell, Palette } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
 import { useTheme } from '../context/ThemeContext';
 

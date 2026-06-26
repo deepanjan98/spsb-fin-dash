@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { ToastProvider } from './context/ToastContext';
@@ -33,7 +33,7 @@ function App() {
     <ThemeProvider>
       <ToastProvider>
         <AuthProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path="/login" element={<Login />} />
             
@@ -59,7 +59,7 @@ function App() {
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
             </Route>
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </AuthProvider>
       </ToastProvider>
     </ThemeProvider>
